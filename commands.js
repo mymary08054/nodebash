@@ -1,7 +1,5 @@
 var fs = require('fs');
 var chalk = require('chalk');
-var log = console.log;
-
 process.stdout.write(chalk.yellow('prompt > '));
 var obj = {
     pwd: function(){
@@ -18,7 +16,22 @@ var obj = {
           process.stdout.write(chalk.magenta(process.env[cmd[1].slice(1)]));
         }
         else process.stdout.write(cmd.slice(1).toString().replace(/,/g , " "));
-      } else {
+      } else if(cmd[0] == "cat") {
+        fs.readFile(cmd[1], 'utf8', function(err, file){
+          if(err) throw err;
+          console.log(file);
+        })
+      }  else if(cmd[0] == "head") {
+        fs.readFile(cmd[1], 'utf8', function(err, file){
+          if(err) throw err;
+          for(var i = 0; i < 5; i++){
+          console.log(file.split('\n')[i]);
+          }
+        })
+      } else if() {
+        
+      } 
+      else {
         process.stdout.write('You typed: ' + cmd);
       }
         process.stdout.write(chalk.yellow('\nprompt > '));
