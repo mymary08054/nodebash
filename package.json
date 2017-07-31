@@ -1,0 +1,19 @@
+{
+  "name": "bash_dependencies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mymary08054/nodebash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mymary08054/nodebash/issues"
+  },
+  "homepage": "https://github.com/mymary08054/nodebash#readme"
+}
